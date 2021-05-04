@@ -1,0 +1,78 @@
+﻿@page "/mytask"
+@inject IJSRuntime JS;
+
+<div class="tabBodyInner tabShow" id="MyTasks">
+    <div class="viewPortArea gridView">
+        <div class="mytaskArea">
+            <div class="subHeadList">
+                <div class="searchArea">
+                    <span class="material-icons">
+                        search
+                    </span>
+                    <input type="text" class="searchInput" placeholder="Search projects">
+                    <span class="material-icons filterIcons">
+                        filter_list
+                    </span>
+                </div>
+                <div class="viewPort">
+                    <ul class="viewPortList">
+                        <li class="active">
+                            <button class="gridView" title="Grid">
+                                <span class="material-icons">
+                                    grid_view
+                                </span>
+                            </button>
+                        </li>
+                        <li class="">
+                            <button class="listView" title="List">
+                                <span class="material-icons">
+                                    list
+                                </span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            @* Task Calender Component *@
+            <TaskCalender></TaskCalender>
+            <div id="boxes">
+
+
+                <div id="leftbox">
+                    <InnerTask></InnerTask>
+                </div>
+
+                <div id="rightbox"  style="padding-left: 20px;padding-right: 20px">
+                    <Tabrighthead></Tabrighthead>
+                    @*<TabRightTime></TabRightTime>*@
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@code {
+    private bool collapseNavMenu = true;
+    private bool expandSubNav;
+    private int ClickedMenu = 0;
+    private bool hasPageName = true;
+    private int prevMenuClickedMenu = 0;
+
+
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        if (hasPageName)
+        {
+            collapseNavMenu = !collapseNavMenu;
+        }
+
+    }
+
+
+}
