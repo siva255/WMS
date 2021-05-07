@@ -1,0 +1,9 @@
+C:\Users\Rock$tar\source\repos\WMS\WMS\Shared\bin\Debug\netstandard2.1\WMS.Shared.deps.json
+C:\Users\Rock$tar\source\repos\WMS\WMS\Shared\bin\Debug\netstandard2.1\WMS.Shared.dll
+C:\Users\Rock$tar\source\repos\WMS\WMS\Shared\bin\Debug\netstandard2.1\WMS.Shared.pdb
+C:\Users\Rock$tar\source\repos\WMS\WMS\Shared\obj\Debug\netstandard2.1\WMS.Shared.AssemblyInfoInputs.cache
+C:\Users\Rock$tar\source\repos\WMS\WMS\Shared\obj\Debug\netstandard2.1\WMS.Shared.AssemblyInfo.cs
+C:\Users\Rock$tar\source\repos\WMS\WMS\Shared\obj\Debug\netstandard2.1\WMS.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Rock$tar\source\repos\WMS\WMS\Shared\obj\Debug\netstandard2.1\WMS.Shared.dll
+C:\Users\Rock$tar\source\repos\WMS\WMS\Shared\obj\Debug\netstandard2.1\WMS.Shared.pdb
+C:\Users\Rock$tar\source\repos\WMS\WMS\Shared\obj\Debug\netstandard2.1\WMS.Shared.csprojAssemblyReference.cache

@@ -1,0 +1,5 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="C:\Users\Rock$tar\source\repos\WMS\WMS\Client\bin\Debug\netstandard2.1\wwwroot\" />
+  <ContentRoot BasePath="/" Path="C:\Users\Rock$tar\source\repos\WMS\WMS\Client\wwwroot\" />
+  <ContentRoot BasePath="_content/Blazorise.Bootstrap" Path="C:\Users\Rock$tar\.nuget\packages\blazorise.bootstrap\0.9.3.6\build\..\staticwebassets\" />
+</StaticWebAssets>

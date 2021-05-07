@@ -1,0 +1,124 @@
+﻿@using WMS.Client.DataLayer
+@inject TabheadrightService tabRightService
+
+@using Microsoft.JSInterop
+@inject IJSRuntime JS;
+
+<div class="tableArea" id="right_table">
+    <div style="display:flex">
+        <button class="btnStyle taskCloseButton" title="Close" @onclick=@demo>
+            <span class="material-icons">
+                close
+            </span>Close
+        </button>
+        <div class="taskDetailsHeadLeft">
+            <div class="taskNameStaus">
+                <p>
+                    PROJ xxxx <span class="taskIconsName taskRisk">
+                        <span class="material-icons taskIcons">
+                            double_arrow
+                        </span>At risk
+                    </span>
+                </p>
+            </div>
+            <h1 class="taskDesc">
+                Project name Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </h1>
+            <span class="stageMessage">stage - activity</span>
+        </div>
+        <div class="taskDetailsHeadRight" style="float:right;">
+            <button class="btnStyle" title="Pause">
+                <span class="material-icons">
+                    pause
+                </span>
+                Pause
+            </button>
+            <button class="btnStyle" title="Reject">
+                <span class="material-icons">
+                    not_interested
+                </span>
+                Reject
+            </button>
+            <button class="btnStyle" title="Finish">
+                <span class="material-icons">
+                    done
+                </span> Finish
+            </button>
+        </div>
+    </div>
+    <TabRightTime></TabRightTime>
+    <div class="filterTable">
+        <div></div>
+        <div class="filterTableInner">
+            <div class="searchArea" style="margin:0px">
+                <span class="material-icons">
+                    search
+                </span>
+                <input type="text" class="searchInput" placeholder="Search files">
+            </div>
+            <div>
+                <span class="material-icons filterIcons">
+                    filter_list
+                </span>
+            </div>
+        </div>
+    </div>
+    <Taskdatatable></Taskdatatable>
+    <div class="listSoftware">
+        <button class="listSoftwareBtn">
+            <div class="spriteImage wordImg"></div>
+            <div class="btnText">MsWord<br /><span>Editing</span></div>
+        </button>
+        <button class="listSoftwareBtn">
+            <div class="spriteImage indesignImg"></div>
+            <div class="btnText">InDesign<br /><span>Editing</span></div>
+        </button>
+    </div>
+</div>
+<FooterIndex></FooterIndex>
+
+
+
+
+
+
+
+
+@code {
+    private bool collapseNavMenu = true;
+    private bool expandSubNav;
+    private int ClickedMenu = 0;
+    private bool hasPageName = true;
+    private int prevMenuClickedMenu = 0;
+    private WMS.Client.Pages.MyTask sss;
+
+
+
+    public IEnumerable<TabheadrightInfo> tabrightlist;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        if (hasPageName)
+        {
+            collapseNavMenu = !collapseNavMenu;
+        }
+
+    }
+
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        tabrightlist = await tabRightService.GetTabheadrightInfos();
+    }
+
+    public void demo()
+    {
+      
+        JS.InvokeAsync<string>("closebuttonjs");
+
+    }
+
+}
